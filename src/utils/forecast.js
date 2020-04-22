@@ -9,7 +9,7 @@ const forecast = (lat, long, callback) => {
       if(!data) {
         callback('Unable to find location', undefined)
       } else {
-        callback(undefined, `${data.weather_descriptions[0]}. It is currently ${data.temperature} degrees out. It feels like ${data.feelslike} degrees out.`)
+        callback(undefined, `${data.weather_descriptions[0]}. It is currently ${data.temperature} degrees out. It feels like ${data.feelslike} degrees out. Humidity is at ${data.humidity}.`)
       }
     }).catch((error) => {
       callback('Unable to connect to weather service!')
